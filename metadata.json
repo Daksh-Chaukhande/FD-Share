@@ -1,0 +1,8 @@
+{
+  "name": "Food Share - College Food Sharing",
+  "description": "A community-driven platform for college students to share surplus food, reduce waste, and track their environmental impact within hostel campuses.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
