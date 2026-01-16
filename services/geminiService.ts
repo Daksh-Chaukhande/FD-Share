@@ -7,7 +7,7 @@ export const geminiService = {
   getSustainabilityTip: async () => {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-2.5-flash',
         contents: 'Give me one short, inspiring tip for reducing food waste in a college hostel environment. Keep it under 20 words.',
         config: { temperature: 0.7 }
       });
@@ -24,7 +24,7 @@ export const geminiService = {
       const base64Data = base64Image.split(',')[1] || base64Image;
       
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image',
+        model: 'gemini-2.5-flash',
         contents: [
           {
             inlineData: {
@@ -62,7 +62,7 @@ export const geminiService = {
   getSafetyGuidelines: async (foodTitle: string) => {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-2.5-flash',
         contents: `What are the official FDA or food safety guidelines for handling and storing ${foodTitle}? Provide 3 key bullet points and mention if it is a high-risk food.`,
         config: {
           tools: [{ googleSearch: {} }],
